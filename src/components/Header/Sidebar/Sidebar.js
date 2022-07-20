@@ -19,13 +19,13 @@ const Sidebar = ({isOpen, toggle}) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={toggle}>About</SidebarLink>
-          <SidebarLink to="discover" onClick={toggle}>Discover</SidebarLink>
-          <SidebarLink to="services" onClick={toggle}>Services</SidebarLink>
-          <SidebarLink to="singup" onClick={toggle}>Sign Up</SidebarLink>
-          <SidebarLink to="sponsors" onClick={toggle}>Sponzoři</SidebarLink>
+          <SidebarLink to="sponsors" onClick={toggle}>Sponzoži</SidebarLink>
+          <SidebarLink to="about" onClick={toggle}>Úvod</SidebarLink>
           <SidebarLink to="coaches" onClick={toggle}>Trenéři</SidebarLink>
           <SidebarLink to="athletes" onClick={toggle}>Atleti</SidebarLink>
+          <SidebarLink to="gallery" onClick={toggle}>Galerie</SidebarLink>
+          <SidebarLink to="rozvrh_cenik" onClick={toggle}>Rozvrh & Ceník</SidebarLink>
+          <SidebarLink to="contact" onClick={toggle}>Kontakt</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
           <SidebarRoute to="/signin">Sign In</SidebarRoute>

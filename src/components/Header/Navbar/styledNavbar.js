@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {Link as LinkRouter} from 'react-router-dom'
 import {Link as LinkScroll} from 'react-scroll'
 import {FaCaretDown} from "react-icons/fa";
-import {green, white} from "../../../Theme";
+import {darkRed, green, white} from "../../../Theme";
 
 
 export const Nav = styled.nav`
@@ -10,7 +10,7 @@ export const Nav = styled.nav`
 	height: 80px;
 	display: flex;
 	justify-content: center;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -25,10 +25,12 @@ export const NavbarContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	height: 80px;
+  text-transform: uppercase;
+  font-weight: 700;
 	z-index: 1;
 	width: 100%;
 	padding: 0 24px;
-	max-width: 1100px;
+	max-width: 1500px;
 
 `
 
@@ -83,7 +85,7 @@ export const NavItem = styled.li`
 		height: 3px;
 		left: 50%;
 		position: absolute;
-		background: ${green};
+		background: ${darkRed};
 		transition: width 0.3s ease 0s, left 0.3s ease 0s;
 		width: 0;
 	}
@@ -103,7 +105,7 @@ export const NavLinks = styled(LinkScroll)`
 	cursor: pointer;
 
 	&.active {
-		border-bottom: 3px solid ${green};
+		border-bottom: 3px solid ${darkRed};
 	}
 /*Just under line*/
 	// &:hover {

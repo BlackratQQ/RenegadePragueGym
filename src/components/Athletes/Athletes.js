@@ -33,7 +33,7 @@ const Athletes = () => {
   return (
 
     <AthleteContainer id="athletes">
-      <HeadingH2 size='4'>Naši Atleti</HeadingH2>
+      <HeadingH2 size='3'>Naši Atleti</HeadingH2>
       <AthleteMainP>Aktuálně nás na profesionální úrovní representují tito atleti. RPG též representuje mnoho atletů
         na amatérské úrovni.
       </AthleteMainP>

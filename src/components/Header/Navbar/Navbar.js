@@ -4,7 +4,6 @@ import {IconContext} from 'react-icons/lib'
 import {animateScroll as scroll} from 'react-scroll'
 
 import {
-  ArrowDown,
   MobileIcon,
   Nav,
   NavbarContainer,
@@ -15,7 +14,6 @@ import {
   NavLogo,
   NavMenu,
 } from './styledNavbar'
-import Dropdown from "./Dropdown/Dropdown";
 
 const Navbar = ({toggle}) => {
   const [scrollNav, setScrollNav] = useState(false)
@@ -38,26 +36,6 @@ const Navbar = ({toggle}) => {
   }
 
 
-  const [dropdown, setDropdown] = useState(false);
-
-
-  const onMouseEnter = () => {
-    if (window.innerWidth < 768) {
-      setDropdown(false);
-    } else {
-      setDropdown(true);
-    }
-  };
-
-  const onMouseLeave = () => {
-    if (window.innerWidth < 768) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
-    }
-  };
-
-
   return (
     <div>
       <IconContext.Provider value={{color: '#fff'}}>
@@ -69,44 +47,6 @@ const Navbar = ({toggle}) => {
             </MobileIcon>
             <NavMenu>
               <NavItem>
-                <NavLinks
-                  to="about"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact='true'
-                  offset={-80}
-                >About</NavLinks> {/*ve styled componentách je class &:active, která určuje barvu*/}
-              </NavItem>
-              <NavItem>
-
-                <NavLinks
-                  onMouseEnter={onMouseEnter}
-                  onMouseLeave={onMouseLeave}
-                >Discover
-                  <ArrowDown/>
-                  {dropdown && <Dropdown />}
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="services"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact='true'
-                  offset={-80}
-                >Services</NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="signup"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact='true'
-                  offset={-80}
-                >Sign Up</NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
@@ -116,7 +56,17 @@ const Navbar = ({toggle}) => {
                   spy={true}
                   exact='true'
                   offset={-80}
-                >Sponsors</NavLinks>
+                >Sponzoři</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="about"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact='true'
+                  offset={-80}
+                >Úvod</NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
@@ -138,17 +88,41 @@ const Navbar = ({toggle}) => {
                   offset={-80}
                 >Atleti</NavLinks>
               </NavItem>
+              {/*<NavItem>*/}
+              {/*  <NavLinks*/}
+              {/*    to="gallery"*/}
+              {/*    smooth={true}*/}
+              {/*    duration={500}*/}
+              {/*    spy={true}*/}
+              {/*    exact='true'*/}
+              {/*    offset={-80}*/}
+              {/*  >Galerie</NavLinks>*/}
+              {/*</NavItem>*/}
+              {/*<NavItem>*/}
+              {/*  <NavLinks*/}
+              {/*    to="rozvrh_cenik"*/}
+              {/*    smooth={true}*/}
+              {/*    duration={500}*/}
+              {/*    spy={true}*/}
+              {/*    exact='true'*/}
+              {/*    offset={-80}*/}
+              {/*  >Rozvrh & Ceník</NavLinks>*/}
+              {/*</NavItem>*/}
+              {/*<NavItem>*/}
+              {/*  <NavLinks*/}
+              {/*    to="contact"*/}
+              {/*    smooth={true}*/}
+              {/*    duration={500}*/}
+              {/*    spy={true}*/}
+              {/*    exact='true'*/}
+              {/*    offset={-80}*/}
+              {/*  >Kontakt</NavLinks>*/}
+              {/*</NavItem>*/}
             </NavMenu>
-            <NavBtn>
-              <NavBtnLink
-                to="/"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact='true'
-                offset={-80}
-              >Sign In</NavBtnLink>
-            </NavBtn>
+            <NavLogo to="/" onClick={toggleHome}>Logo</NavLogo>
+            <MobileIcon onClick={toggle}>
+              <FaBars/>
+            </MobileIcon>
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>

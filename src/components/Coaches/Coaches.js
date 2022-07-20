@@ -9,7 +9,7 @@ const FourColumnsStyles = () => {
 
   return (
     <Container id="coaches">
-      <HeadingH2 size='4'>Title H2</HeadingH2>
+      <HeadingH2 size='3'>Title H2</HeadingH2>
       <ContainerWrapper>
         <ContainerCard>
           <CardImg src={photo1}/>
@@ -35,16 +35,16 @@ const FourColumnsStyles = () => {
               <HeadingH3>David Vyvážil</HeadingH3>
               <HeadingH4>Head Coach</HeadingH4>
             </TitleWrapper>
-            <CardP setAlign={'center'}><p>Třicet let v bojových sportech. Prošel Judem, Zápasem, Boxem, Thaiboxem,
+            <CardP setAlign={'center'}>Třicet let v bojových sportech. Prošel Judem, Zápasem, Boxem, Thaiboxem,
               Kickboxem, Sambem a
-              Brazilským Jiu-Jitsu.</p>
-              <br/>
-              <p>Jeden z prvních zápasníků, v bojích bez pravidel (nyní MMA) a zakladatel gymů v
-                Týništi nad Orlicí, Dvoře Králové nad Labem, Hradci Králové a Praze.</p>
-              <br/>
-              <p>První zápas v MMA absolvoval v roce
+              Brazilským Jiu-Jitsu.
+
+              Jeden z prvních zápasníků, v bojích bez pravidel (nyní MMA) a zakladatel gymů v
+                Týništi nad Orlicí, Dvoře Králové nad Labem, Hradci Králové a Praze.
+
+              První zápas v MMA absolvoval v roce
                 1999. Ukončil zápasovou kariéru se skórem 8-3-0. Poté už se věnuje MMA pouze jako trenér.
-              </p>
+
             </CardP>
           </CardInfo>
         </ContainerCard>
