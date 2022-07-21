@@ -6,6 +6,11 @@ import Coaches from "../Coaches/Coaches";
 import Athletes from "../Athletes/Athletes";
 import Wallpaper from "../Header/Wallpaper/Wallpaper";
 import About from "../About/About";
+import Coach from "../Coaches/Coach";
+import DataCoaches from "../Coaches/dataCoaches";
+
+
+
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,6 +25,7 @@ const Home = () => {
       {/*<HeroSection/>*/}
 
       <Wallpaper/>
+      <DataCoaches />
       <About/>
       <Athletes/>
       <Coaches/>

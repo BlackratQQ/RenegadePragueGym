@@ -58,6 +58,7 @@ export const ContainerCard = styled.div`
 	gap: 2rem;
 	//align-items: center;
 	margin-top: 10px;
+  
 
 	&:nth-child(even) {
 		flex-direction: row-reverse;
@@ -103,8 +104,23 @@ export const TitleWrapper = styled.div`
 	}
 `
 
-export const CardP = styled.p`
+export const CardP = styled.div`
 	color: ${white};
 	text-align: ${props => props.setAlign};
 `
 
+export const Paragraph1 = styled.p`
+
+`
+
+export const Paragraph2 = styled(Paragraph1)`
+
+`
+
+export const Paragraph3 = styled(Paragraph1)`
+
+`
+
+export const Paragraph4 = styled(Paragraph1)`
+
+`
