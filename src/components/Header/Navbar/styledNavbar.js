@@ -4,6 +4,7 @@ import {Link as LinkScroll} from 'react-scroll'
 import {FaCaretDown} from "react-icons/fa";
 import {darkRed, green, white} from "../../../Theme";
 
+import LogoRPG from '../../../images/RPG Logo Medium.png'
 
 export const Nav = styled.nav`
 	background: ${({scrollNav}) => (scrollNav ? '#000' : 'transparent')};
@@ -25,8 +26,8 @@ export const NavbarContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	height: 80px;
-  text-transform: uppercase;
-  font-weight: 700;
+	text-transform: uppercase;
+	font-weight: 700;
 	z-index: 1;
 	width: 100%;
 	padding: 0 24px;
@@ -44,6 +45,20 @@ export const NavLogo = styled(LinkRouter)`
 	margin-left: 24px;
 	font-weight: bold;
 	text-decoration: none;
+
+	visibility: 
+	${({visibleLogo}) => (visibleLogo ? 'inherit' : 'hidden')};
+`
+
+export const NavLogoRight = styled(NavLogo)`
+
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
+`
+
+export const MiniLogo = styled.div`
+
 `
 
 export const MobileIcon = styled.div`
@@ -61,6 +76,7 @@ export const MobileIcon = styled.div`
 	}
 `
 
+
 export const NavMenu = styled.ul`
 	display: flex;
 	list-style: none;
@@ -75,9 +91,10 @@ export const NavItem = styled.li`
 	height: 80px;
 	display: flex;
 	align-items: center;
-  position: relative;
+	position: relative;
 
-/*Animated underline*/
+	/*Animated underline*/
+
 	&:after {
 		bottom: 0;
 		content: "";
@@ -89,6 +106,7 @@ export const NavItem = styled.li`
 		transition: width 0.3s ease 0s, left 0.3s ease 0s;
 		width: 0;
 	}
+
 	&:hover:after {
 		width: 100%;
 		left: 0;
@@ -107,12 +125,13 @@ export const NavLinks = styled(LinkScroll)`
 	&.active {
 		border-bottom: 3px solid ${darkRed};
 	}
-/*Just under line*/
+
+	/*Just under line*/
 	// &:hover {
-	// 	border-bottom: 3px solid ${green};
-	// 	color: ${green};
+		// 	border-bottom: 3px solid ${green};
+		// 	color: ${green};
 	// }
-  
+
 `
 
 export const NavBtn = styled.nav`

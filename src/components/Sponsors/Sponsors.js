@@ -9,8 +9,8 @@ import {WrapperLink} from './styledSponsors'
 const Sponsors = () => {
   return (
     <WrapperLink id="sponsors">
-      <Link href="https://www.google.com" img src={Sponsor1} justifySelf={'right'}/>
-      <Link href="https://www.google.com" img src={Sponsor2} justifySelf={'left'}/>
+      <Link href="/" img src={Sponsor1} justifySelf={'right'}/>
+      <Link href="/" img src={Sponsor2} justifySelf={'left'}/>
     </WrapperLink>
   )
 }

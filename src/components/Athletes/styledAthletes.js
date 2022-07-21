@@ -72,6 +72,7 @@ export const AthleteCards = styled.div`
 	padding: 5px 30px 5px 30px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
 	transition: all 0.2s ease-in-out;
+  height: 750px;
 
 	&:hover {
 		transform: scale(1.02);
@@ -119,6 +120,11 @@ export const InstagramIcon = styled(FaInstagram)`
 export const AthletePhoto = styled.img`
 	margin-bottom: 10px;
   width: 300px;
+	box-shadow: inset 0px -5px 6px -3px ${darkRed};
+  
+	&:hover {
+		box-shadow: inset 0px -5px 6px 0px ${darkRed};
+	}
 `
 
 export const ButtonWrapper = styled.div`

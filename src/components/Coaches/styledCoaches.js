@@ -57,7 +57,7 @@ export const ContainerCard = styled.div`
 	display: flex;
 	gap: 2rem;
 	//align-items: center;
-	margin-top: 10px;
+	margin-top: 35px;
   
 
 	&:nth-child(even) {
@@ -71,9 +71,9 @@ export const ContainerCard = styled.div`
 `
 
 export const CardImg = styled.img`
-	width: 100%;
-	height: auto;
+
 	max-width: 300px;
+  max-height: 375px;
 	margin: 0 auto;
 	float: left;
 `
@@ -98,7 +98,7 @@ export const TitleWrapper = styled.div`
 	}
 
 	h4 {
-		color: ${darkRed};
+		color: ${red};
 		font-size: ${fourthHeading}
 		margin-bottom: 10px;
 	}
@@ -110,7 +110,7 @@ export const CardP = styled.div`
 `
 
 export const Paragraph1 = styled.p`
-
+margin-bottom: 10px;
 `
 
 export const Paragraph2 = styled(Paragraph1)`

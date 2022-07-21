@@ -3,17 +3,7 @@ import {FaBars} from "react-icons/fa";
 import {IconContext} from 'react-icons/lib'
 import {animateScroll as scroll} from 'react-scroll'
 
-import {
-  MobileIcon,
-  Nav,
-  NavbarContainer,
-  NavBtn,
-  NavBtnLink,
-  NavItem,
-  NavLinks,
-  NavLogo,
-  NavMenu,
-} from './styledNavbar'
+import {MobileIcon, Nav, NavbarContainer, NavItem, NavLinks, NavLogo, NavLogoRight, NavMenu,} from './styledNavbar'
 
 const Navbar = ({toggle}) => {
   const [scrollNav, setScrollNav] = useState(false)
@@ -26,9 +16,22 @@ const Navbar = ({toggle}) => {
     }
   }
 
+  const [visibleLogo, setVisibleLogo] = useState(false)
+
+  const showLogo = () => {
+    if (window.scrollY >= 1200) {
+      setVisibleLogo(true)
+    } else {
+      setVisibleLogo(false)
+    }
+  }
 
   useEffect(() => {
     window.addEventListener('scroll', changeNav)
+  }, [])
+
+  useEffect(() => {
+    window.addEventListener('scroll', showLogo)
   }, [])
 
   const toggleHome = () => {
@@ -41,7 +44,7 @@ const Navbar = ({toggle}) => {
       <IconContext.Provider value={{color: '#fff'}}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
-            <NavLogo to="/" onClick={toggleHome}>Logo</NavLogo>
+            <NavLogo to="/" visibleLogo={visibleLogo} onClick={toggleHome}>LOGO</NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars/>
             </MobileIcon>
@@ -119,7 +122,7 @@ const Navbar = ({toggle}) => {
               {/*  >Kontakt</NavLinks>*/}
               {/*</NavItem>*/}
             </NavMenu>
-            <NavLogo to="/" onClick={toggleHome}>Logo</NavLogo>
+            <NavLogoRight to="/" visibleLogo={visibleLogo} onClick={toggleHome}>LOGO</NavLogoRight>
             <MobileIcon onClick={toggle}>
               <FaBars/>
             </MobileIcon>

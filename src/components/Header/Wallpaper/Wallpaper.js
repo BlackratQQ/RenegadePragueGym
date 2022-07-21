@@ -10,7 +10,7 @@ const Wallpaper = () => {
     <HeaderOneContainer>
       <HeaderWrapper>
         <LogoWrapper>
-          <Link href="https://www.google.com" img src={Logo}/>
+          <Link href="/" img src={Logo}/>
         </LogoWrapper>
         <HeaderHeading>
           xxxxx

@@ -2,18 +2,18 @@ import styled from 'styled-components'
 import {red, white} from "../../Theme";
 
 export const AboutContainer = styled.div`
-display: flex;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background: #010606;
 	padding-bottom: 20px;
-  
-  h2 {
+
+	h2 {
 		position: relative;
 		text-align: center;
 		color: ${white};
 		margin-bottom: 16px;
-    
+
 		@media screen and (max-width: 480px) {
 			font-size: 2rem;
 		}
@@ -24,7 +24,7 @@ display: flex;
 			bottom: 0;
 			content: "";
 			display: block;
-      margin-bottom: -10px;
+			margin-bottom: -10px;
 			height: 2px;
 			position: absolute;
 			background: ${red};
@@ -32,19 +32,20 @@ display: flex;
 			width: 90%;
 			left: 5%;
 		}
-  }
+	}
 `
 export const AboutWrapper = styled.div`
-  display: flex;
-  max-width: 1600px;
+	display: flex;
+	max-width: 1600px;
+	margin-top: 40px;
 
 `
 
 export const AboutSectionP = styled.p`
-  color: ${white};
+	color: ${white};
 	flex: 2;
 `
 
 export const FacebookSection = styled.div`
-  flex: 1;
+	flex: 1;
 `
